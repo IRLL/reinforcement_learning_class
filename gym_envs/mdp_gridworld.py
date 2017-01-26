@@ -20,6 +20,7 @@ MAP = [
 
 class MDPGridworldEnv(discrete.DiscreteEnv):
     """
+    IMPORTANT: This code is based from openAI gym's FrozenLake code.
     This is a 3×4 grid world based from problem for an AI-Class. (https://goo.gl/GqkyzT)
     The surface is described using a grid like the following
 
