@@ -35,13 +35,14 @@ Steps in adding `MDPGridworld-v0` environment in OpenAI Gym
 5. We have to register our new environment, you need add the code below the `import` line. Optionally, you can look for the `Toy Text` registration group and add the code there. Save and close after.
 
     ```python
-    # Add this code in __init__.py under envs directory
     from gym.envs.registration import registry, register, make, spec
 
     # other registration codes ...
 
     # Toy Text
     # ----------------------------------------
+    
+    # Add this code below in envs/__init__.py
     register(
         id='MDPGridworld-v0',
         entry_point='gym.envs.toy_text:MDPGridworldEnv',
@@ -62,7 +63,7 @@ Steps in adding `MDPGridworld-v0` environment in OpenAI Gym
     $ gedit __init__.py
     ```
     ```python
-    # Add this code in __init__.py under toy_text directory
+    # Add this code in toy_text/__init__.py
     from gym.envs.toy_text.mdp_gridworld import MDPGridworldEnv
     ```
 
