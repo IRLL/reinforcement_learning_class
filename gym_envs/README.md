@@ -1,9 +1,12 @@
-Environments for OpenAI Gym
-=========================
-
+OpenAI Gym Resources
+----------
+* [Documentation](https://gym.openai.com/docs)
+* [Source code](https://github.com/openai/gym)
+* [Wiki](https://github.com/openai/gym/wiki)
 
 Steps in adding `MDPGridworld-v0` environment in OpenAI Gym
 -------------------------
+OpenAI Gym also provides [instructions](https://github.com/openai/gym/wiki/Environments) on how to add a new environment.
 
 1. Open a terminal. Type `python` and hit enter, and you should enter Python's interpreter.
 
