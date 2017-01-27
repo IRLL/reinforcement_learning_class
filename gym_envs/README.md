@@ -4,7 +4,7 @@ OpenAI Gym Resources
 * [Source code](https://github.com/openai/gym)
 * [Wiki](https://github.com/openai/gym/wiki)
 
-Steps in adding `MDPGridworld-v0` environment in OpenAI Gym
+Steps in adding `MDPGridworld-v0` environment in Gym's `Toy Text` collection
 -------------------------
 OpenAI Gym also provides [instructions](https://github.com/openai/gym/wiki/Environments) on how to add a new environment.
 
