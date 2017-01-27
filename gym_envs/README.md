@@ -108,4 +108,4 @@ This version of the 3×4 grid world is deterministic. The set-up for this proble
 
 * **Rewards**: `r(3) = +100`, `r(7) = -100`. Other states has a reward of `-3`.
 
-* **Terminal states**: `{3, 7}` corresponds to goal (G) and fire (F) respectively are terminating states, which means an episode ends when the agent reaches either states.
+* **Terminal states**: `{3, 7}` corresponds to goal (G) and fire (F) respectively, which means an episode ends when the agent reaches either states.
