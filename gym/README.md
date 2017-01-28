@@ -16,19 +16,19 @@ Two methods of using `MDPGridworld` gym environment?
 ####<a name="direct"></a>Importing `MDPGridworld` class directly from your python code ###
 In the examples folder, I have included a sample code mdp.py that uses this method. 
 
-    ```python
-    import gym
-    
-    # add directory to the PYTHONPATH when searching for python modules
-    import sys
-    sys.path.append("../") 
-    
-    # line above ensures the interpreter can locate envs.mdp_gridworld
-    from envs.mdp_gridworld import MDPGridworldEnv 
-    
-    # this is just the same as env = gym.make('MDPGridworld-v0')
-    env = MDPGridworldEnv()
-    ```
+```python
+import gym
+
+# add directory to the PYTHONPATH when searching for python modules
+import sys
+sys.path.append("../") 
+
+# line above ensures the interpreter can locate envs.mdp_gridworld
+from envs.mdp_gridworld import MDPGridworldEnv 
+
+# this is just the same as env = gym.make('MDPGridworld-v0')
+env = MDPGridworldEnv()
+```
 
 
 ####<a name="steps"></a> Steps in adding `MDPGridworld-v0` environment in Gym's `Toy Text` collection ###(#steps)
