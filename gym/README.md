@@ -14,7 +14,7 @@ Two methods of using `MDPGridworld` gym environment?
 
 
 ####<a name="direct"></a>Importing `MDPGridworld` class directly from your python code ###
-In the examples folder, I have included a sample code [mdp.py](example/mdp.py) that uses this method. 
+In the `example` folder, I have included a sample code [`mdp.py`](example/mdp.py) that uses this method. 
 
 ```python
 # add directory to the PYTHONPATH when searching for python modules
