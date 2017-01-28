@@ -61,7 +61,7 @@ class MDPGridworldEnv(discrete.DiscreteEnv):
                 col = min(col+1,self.ncol-1)
             elif a==NORTH:
                 row = max(row-1,0)
-            if self.desc[row+1,col+1]==b"|":
+            if self.desc[row+1,col+1] == '|':
                 row, col = t_row, t_col
             return (row, col)
 
@@ -72,8 +72,10 @@ class MDPGridworldEnv(discrete.DiscreteEnv):
                 for a in range(4):
                     li = P[s][a]
                     letter = self.desc[row+1, col+1]
-                    if letter in b'GF|':
+                    if letter in b'GF':
                         li.append((1.0, s, 0, True))
+                    elif letter == '|':
+                        li.append((0.0, s, 0, False))
                     else:
                         rew = -3
                         newrow, newcol = inc(row, col, a)
