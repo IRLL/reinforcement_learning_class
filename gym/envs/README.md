@@ -77,7 +77,7 @@ This version of the 3×4 grid world is deterministic. The set-up for this proble
     import gym
     env = gym.make('MDPGridworld-v0')
     
-    state = 8  # Starting state
+    state = 8
     action = 0 # North
     print env.P[state][action]
     # [(1.0, 4, -3, False)]
