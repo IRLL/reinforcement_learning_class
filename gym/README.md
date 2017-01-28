@@ -6,8 +6,25 @@ OpenAI Gym Resources
 
 Two methods of using `MDPGridworld` gym environment?
 -------------------------
-1. Call the `MDPGridworld` directly from your python code
-2. [Follow the steps in add a new environment in gym](#steps)
+1. [Importing `MDPGridworld` class directly from your python code](#direct)
+2. [Follow the steps in adding a new environment in gym](#steps)
+
+####<a name="direct"></a>Importing `MDPGridworld` class directly from your python code ###
+1. In the examples folder, I have included a sample code mdp.py that uses this method. 
+
+    ```python
+    import gym
+    
+    # add directory to the PYTHONPATH when searching for python modules
+    import sys
+    sys.path.append("../") 
+    
+    # line above ensures the interpreter can locate envs.mdp_gridworld
+    from envs.mdp_gridworld import MDPGridworldEnv 
+    
+    # this is just the same as env = gym.make('MDPGridworld-v0')
+    env = MDPGridworldEnv()
+    ```
 
 ####<a name="steps"></a> Steps in adding `MDPGridworld-v0` environment in Gym's `Toy Text` collection ###(#steps)
 OpenAI Gym also provides [instructions](https://github.com/openai/gym/wiki/Environments) on how to add a new environment. **IMPORTANT:** Ensure that the `Toy Text` environment collection is installed with your `gym` installation. 
