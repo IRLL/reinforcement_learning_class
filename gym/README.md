@@ -29,7 +29,7 @@ env = MDPGridworldEnv()
 ```
 
 
-####<a name="steps"></a> Steps in adding `MDPGridworld-v0` environment in Gym's `Toy Text` collection ###(#steps)
+####<a name="steps"></a> Steps in adding `MDPGridworld-v0` environment in Gym's `Toy Text` collection ###
 OpenAI Gym also provides [instructions](https://github.com/openai/gym/wiki/Environments) on how to add a new environment. 
 
 1. Open a terminal. Type `python` and hit enter, and you should enter Python's interpreter.
