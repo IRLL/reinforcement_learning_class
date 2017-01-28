@@ -21,7 +21,7 @@ MAP = [
 class MDPGridworldEnv(discrete.DiscreteEnv):
     """
     IMPORTANT: This code is based from openAI gym's FrozenLake code.
-    This is a 3×4 grid world based from problem for an AI-Class. (https://goo.gl/GqkyzT)
+    This is a 3x4 grid world based from problem for an AI-Class. (https://goo.gl/GqkyzT)
     The surface is described using a grid like the following
 
     S : starting point, non-terminal state (reward: -3)
@@ -35,7 +35,8 @@ class MDPGridworldEnv(discrete.DiscreteEnv):
 
     metadata = {'render.modes': ['human', 'ansi']}
 
-    def __init__(self):
+    def __init__(self, shape=[3,4]):
+        self.shape = shape
         self.desc = np.asarray(MAP,dtype='c')
 
         self.nrow = nR = 3
@@ -44,7 +45,7 @@ class MDPGridworldEnv(discrete.DiscreteEnv):
         nS = nR * nC
 
         isd = np.zeros(nS)
-        
+
 
         P = {s : {a : [] for a in range(nA)} for s in range(nS)}
 
@@ -71,16 +72,19 @@ class MDPGridworldEnv(discrete.DiscreteEnv):
                 for a in range(4):
                     li = P[s][a]
                     letter = self.desc[row+1, col+1]
-                    rew = -3
-		    newrow, newcol = inc(row, col, a)
-		    newstate = to_s(newrow, newcol)
-		    newletter = self.desc[newrow+1, newcol+1]
-		    done = bytes(newletter) in 'GF'
-		    if bytes(newletter) in 'G':
-                        rew = 100
-                    elif bytes(newletter) in 'F':
-                        rew = -100
-		    li.append((1.0, newstate, rew, done))
+                    if letter in b'GF|':
+                        li.append((1.0, s, 0, True))
+                    else:
+                        rew = -3
+                        newrow, newcol = inc(row, col, a)
+                        newstate = to_s(newrow, newcol)
+                        newletter = self.desc[newrow+1, newcol+1]
+                        done = bytes(newletter) in 'GF'
+                        if bytes(newletter) in 'G':
+                            rew = 100
+                        elif bytes(newletter) in 'F':
+                            rew = -100
+                        li.append((1.0, newstate, rew, done))
 
         isd /= isd.sum()
         super(MDPGridworldEnv, self).__init__(nS, nA, P, isd)
