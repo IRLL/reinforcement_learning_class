@@ -17,8 +17,6 @@ Two methods of using `MDPGridworld` gym environment?
 In the examples folder, I have included a sample code mdp.py that uses this method. 
 
 ```python
-import gym
-
 # add directory to the PYTHONPATH when searching for python modules
 import sys
 sys.path.append("../") 
@@ -97,3 +95,8 @@ OpenAI Gym also provides [instructions](https://github.com/openai/gym/wiki/Envir
     ```
 
 8. `MDPGridworld-v0` gym environment is now ready to used. 
+
+    ```python
+    import gym
+    env = gym.make('MDPGridworld-v0')
+    ```
