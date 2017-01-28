@@ -1,9 +1,12 @@
-Environments for OpenAI Gym
-=========================
+OpenAI Gym Resources
+----------
+* [Documentation](https://gym.openai.com/docs)
+* [Source code](https://github.com/openai/gym)
+* [Wiki](https://github.com/openai/gym/wiki)
 
-
-Steps in adding `MDPGridworld-v0` environment in OpenAI Gym
+Steps in adding `MDPGridworld-v0` environment in Gym's `Toy Text` collection
 -------------------------
+OpenAI Gym also provides [instructions](https://github.com/openai/gym/wiki/Environments) on how to add a new environment. **IMPORTANT:** Ensure that the `Toy Text` environment collection is installed with your `gym` installation. 
 
 1. Open a terminal. Type `python` and hit enter, and you should enter Python's interpreter.
 
@@ -35,13 +38,14 @@ Steps in adding `MDPGridworld-v0` environment in OpenAI Gym
 5. We have to register our new environment, you need add the code below the `import` line. Optionally, you can look for the `Toy Text` registration group and add the code there. Save and close after.
 
     ```python
-    # Add this code in __init__.py under envs directory
     from gym.envs.registration import registry, register, make, spec
 
     # other registration codes ...
 
     # Toy Text
     # ----------------------------------------
+    
+    # Add this code below in envs/__init__.py
     register(
         id='MDPGridworld-v0',
         entry_point='gym.envs.toy_text:MDPGridworldEnv',
@@ -62,7 +66,7 @@ Steps in adding `MDPGridworld-v0` environment in OpenAI Gym
     $ gedit __init__.py
     ```
     ```python
-    # Add this code in __init__.py under toy_text directory
+    # Add this code in toy_text/__init__.py
     from gym.envs.toy_text.mdp_gridworld import MDPGridworldEnv
     ```
 
@@ -104,4 +108,4 @@ This version of the 3×4 grid world is deterministic. The set-up for this proble
 
 * **Rewards**: `r(3) = +100`, `r(7) = -100`. Other states has a reward of `-3`.
 
-* **Terminal states**: `{3, 7}` corresponds to goal (G) and fire (F) respectively are terminating states, which means an episode ends when the agent reaches either states.
+* **Terminal states**: `{3, 7}` corresponds to goal (G) and fire (F) respectively, which means an episode ends when the agent reaches either states.
