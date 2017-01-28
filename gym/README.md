@@ -9,7 +9,7 @@ Two methods of using `MDPGridworld` gym environment?
 1. Call the `MDPGridworld` directly from your python code
 2. [Follow the steps in add a new environment in gym](#steps)
 
-#### Steps in adding `MDPGridworld-v0` environment in Gym's `Toy Text` collection ###(#steps)
+####<a name="steps"></a> Steps in adding `MDPGridworld-v0` environment in Gym's `Toy Text` collection ###(#steps)
 OpenAI Gym also provides [instructions](https://github.com/openai/gym/wiki/Environments) on how to add a new environment. **IMPORTANT:** Ensure that the `Toy Text` environment collection is installed with your `gym` installation. 
 
 1. Open a terminal. Type `python` and hit enter, and you should enter Python's interpreter.
