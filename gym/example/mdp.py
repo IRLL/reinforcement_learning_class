@@ -1,12 +1,11 @@
-import gym
+# import gym # Uncomment if using gym.make
 import time
 import sys
 sys.path.append("../")
 from envs.mdp_gridworld import MDPGridworldEnv
 
-# Uncomment below if you followed the instructions on how to add a new gym environment
+# Uncomment if you added MDPGridworld as a new gym environment
 # env = gym.make('MDPGridworld-v0')
-
 # You have to import MDPGridworldEnv properly in order for environment to work
 env = MDPGridworldEnv()
 
