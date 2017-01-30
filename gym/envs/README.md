@@ -27,7 +27,7 @@ This version of the 3×4 grid world is deterministic. The set-up for this proble
     env = gym.make('MDPGridworld-v0')
     print env.observation_space # give access to the Discrete state object
     # Discrete(12)
-    print evn.nS # give access to scalar value representing range for the states
+    print env.observation_space.n # give access to scalar value representing range for the states
     # 12
     ```
 
@@ -45,7 +45,7 @@ This version of the 3×4 grid world is deterministic. The set-up for this proble
     env = gym.make('MDPGridworld-v0')
     print env.action_space # give access to the Discrete action object
     # Discrete(4)
-    print evn.nA # give access to scalar value representing range for the available actions
+    print env.action_space.n # give access to scalar value representing range for the available actions
     # 4
     ```
 
