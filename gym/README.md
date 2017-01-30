@@ -6,7 +6,7 @@ OpenAI Gym Resources
 
 Two methods of using `MDPGridworld` gym environment?
 -------------------------
-**IMPORTANT:** Regardless which method you decide to use, ensure that the `Toy Text` environment collection is installed with your `gym` installation. 
+**IMPORTANT:** This class requires the OpenAI `gym` installed. It specifically requires the `Toy Text` environment collection installed which should be included even with the minimal gym installation.
 
 1. [Importing `MDPGridworld` class directly from your python code](#direct)
 2. [Follow the steps in adding a new environment in gym](#steps)
