@@ -81,10 +81,10 @@ class MDPGridworldEnv(discrete.DiscreteEnv):
                         newrow, newcol = inc(row, col, a)
                         newstate = to_s(newrow, newcol)
                         newletter = self.desc[newrow+1, newcol+1]
-                        done = bytes(newletter) in 'GF'
-                        if bytes(newletter) in 'G':
+                        done = bytes(newletter) in b'GF'
+                        if bytes(newletter) in b'G':
                             rew = 100
-                        elif bytes(newletter) in 'F':
+                        elif bytes(newletter) in b'F':
                             rew = -100
                         li.append((1.0, newstate, rew, done))
 
