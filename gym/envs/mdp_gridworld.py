@@ -74,7 +74,7 @@ class MDPGridworldEnv(discrete.DiscreteEnv):
                     letter = self.desc[row+1, col+1]
                     if letter in b'GF':
                         li.append((1.0, s, 0, True))
-                    elif letter == '|':
+                    elif letter == b'|':
                         li.append((0.0, s, 0, False))
                     else:
                         rew = -3
