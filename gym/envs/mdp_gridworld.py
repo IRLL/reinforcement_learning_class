@@ -61,7 +61,7 @@ class MDPGridworldEnv(discrete.DiscreteEnv):
                 col = min(col+1,self.ncol-1)
             elif a==NORTH:
                 row = max(row-1,0)
-            if self.desc[row+1,col+1] == '|':
+            if self.desc[row+1,col+1] == b'|':
                 row, col = t_row, t_col
             return (row, col)
 
