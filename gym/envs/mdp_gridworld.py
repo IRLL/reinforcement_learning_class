@@ -27,7 +27,7 @@ class MDPGridworldEnv(discrete.DiscreteEnv):
     S : starting point, non-terminal state (reward: -3)
       : non-terminal states (reward: -3)
     F : fire, burn to death (reward: -100)
-    G : goal, an alternate universe where Trump is not the president (reward: +100)
+    G : goal (reward: +100)
 
     The episode ends when you reach the goal or burn in hell.
 
